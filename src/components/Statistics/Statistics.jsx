@@ -11,7 +11,7 @@ import {
 
 export const Statistics = ({title, data}) => (
 <StatStyled>
-  <StatTitleStyled>{title}</StatTitleStyled>
+{title && <StatTitleStyled>{title}</StatTitleStyled>}
   <StatListStyled>
     {data.map(stat => (
     <StatListItemStyled key={stat.id} 
