@@ -11,7 +11,7 @@ export const HeaderStyled = styled.h2`
 margin-bottom: 10; 
 `;
 
-export const FriendsListItem = styled.li`
+export const FriendsListItemStyled = styled.li`
   margin-bottom: 10px;
   display: flex;
   align-items:center;

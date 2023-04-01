@@ -5,9 +5,6 @@ import {
   StatStyled,
   StatTitleStyled,
 } from './Statistics.styled';
-// const setBG = () => {
-// return  Math.floor(Math.random()*16777215).toString(16);
-// }
 
 export const Statistics = ({title, data}) => (
 <StatStyled>

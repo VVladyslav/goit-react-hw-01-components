@@ -1,28 +1,18 @@
 import PropTypes from 'prop-types';
-import { BsFillCircleFill } from "react-icons/bs";
+import { FriendsListItem } from './FriendsListItem';
 import {
 FriendsListStyled,
-FriendsListItem,
 HeaderStyled,
 } from './Friends.styled'
 export const FriendsList = ({title, friends}) => (
 <>
 <HeaderStyled>{title}</HeaderStyled>
-  <FriendsListStyled>
-    {friends.map(({id, avatar, name, isOnline}) =>
-      <FriendsListItem key={id}>
-      <BsFillCircleFill fill = {isOnline ? "green" : "red"}></BsFillCircleFill>
-      <img src={avatar} alt="User avatar" width="80" />
-      <p>{name}</p>
-    </FriendsListItem>)}
-</FriendsListStyled>
+  <FriendsListStyled>{friends.map(({id, avatar, name, isOnline}) =>
+  <FriendsListItem id={id} avatar={avatar} name={name} isOnline={isOnline}/>)}
+  </FriendsListStyled>
 </>
 );
 
 FriendsList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.shape({
-    avatar: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  })).isRequired,
-};
+  friends: PropTypes.array.isRequired,
+  };
